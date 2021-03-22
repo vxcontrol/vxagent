@@ -1,0 +1,1 @@
+P=mingw64 LF="-static -Wl,--export-all-symbols -Wl,--whole-archive" LD="-Wl,--no-whole-archive -lgdi32 -lmsimg32 -lopengl32 -lwinmm -lws2_32 -lole32 -lpsapi -lMpr -lluajit -lstdc++" T="vxagent.exe" ./build.sh
