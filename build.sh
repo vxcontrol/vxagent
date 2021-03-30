@@ -8,4 +8,4 @@ if [ ! -d "$BASE_PREFIX" ]; then
 fi
 # go get
 # for debugging -gcflags="all=-N -l" 
-go build -ldflags "-X main.PackageVer=$PACKAGE_VER -X main.PackageRev=$PACKAGE_REV -L $BASE_PREFIX/$P -extldflags '$LF $BASE_PREFIX/$P/libluab.a $LD'" -o build/$T main.go
+CGO_ENABLED=1 go build -ldflags "-X main.PackageVer=$PACKAGE_VER -X main.PackageRev=$PACKAGE_REV -L $BASE_PREFIX/$P -extldflags '$LF $BASE_PREFIX/$P/libluab.a $LD'" -o build/$T main.go
